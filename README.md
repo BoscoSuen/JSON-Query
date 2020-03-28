@@ -288,13 +288,7 @@ Your query response will take one of three forms, depending on the query:
 
 > If your query requires that you return multiple `ModelNodes`, then you do that by returning a `ModelCollection`. This object should be able to hold as many `ModelNodes` from your `Model` as are necessary. Note, however, that a `ModelCollection` doesn't own the `ModelNodes` and should not delete them.  They will ultimately be deleted when your `Model` gets destructed. 
 
-# JSONParser Code Analysis (EXTRA CREDIT)
-
-Write a brief analysis of the code provided in the `JSONParser` class. Review for clarity of design, simplicity, correctness, coding style.  Write your answer in a textfile called "code-review.txt".  
-
 # Testing
-
-We've provided a testing framework for you, much like before. To run a test, you need to give the `Testing` class two files (examples provided). First -- you need a .json file that contains the data you to load into your `Model`. Then you need a "commands" file. The commands file has a series of line, each of which is a text-representation of a query. Your testing class reads each line, and calls the `CommandProcessor` class. The `CommandProcessor` class is responsible for converting the text version of the command into a series of "query statements" that your `Model` provides. 
 
 While we've given you a simple test file (test.json) and associated commands file (test.txt).  After you get these to work, try making your own files:
 

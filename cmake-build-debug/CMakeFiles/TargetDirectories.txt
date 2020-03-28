@@ -1,3 +1,0 @@
-/Users/suen/Desktop/ECE141/Assignments/JSON-Query/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/suen/Desktop/ECE141/Assignments/JSON-Query/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/suen/Desktop/ECE141/Assignments/JSON-Query/cmake-build-debug/CMakeFiles/wi20_assignment4_Yukinichi.dir
