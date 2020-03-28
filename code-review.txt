@@ -1,0 +1,21 @@
+Code Review:
+// design, simplicity, correctness, coding style
+The JSONParser correctly parse the JSON input stream and open a container for new nested nodes and close container to get
+back to the upper level nodes, and correctly add key value pair or add item in the container. And the class uses
+stack to store the level JSON status and successfully parse the whole JSON input stream.
+
+However, in the parser grammar, the class forget to consider the "." and cannot parse the float correctly,
+and I have already amended the parser to make the code run correctly.
+
+In the JSONParser class, the class uses some pure interfaces to handle "open container", "add Item", "addKeyValPair", "close container",
+and it is a great way that the query model can use its interface to realize its customized functions and greatly make
+the code more flexible and make the whole design simple and clear. In further design, we can use the interfaces and
+build our own model by calling the Listener and get the model, and we can do further query very easily.
+
+What's more, the class uses an enum class to keep track the type of node and make the whole code very clear to
+see what the node type is and make further design more clear.
+
+Last but not least, in the state stack of the JSONParser class successfully store the key of the value pair.
+For example, in some nested node, the key matches the nodes. In the close container function, when we need to
+match the key to the corresponding node, we can successfully get the node by stack.top() and get the key by
+getting the key which is already stored. This way to store the key makes the model building more easier and clear.
